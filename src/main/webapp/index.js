@@ -11,6 +11,18 @@ xhrGet("SimpleServlet", function(responseText){
 	console.log(err);
 });
 
+function callBlueMix() {
+	console.log("call bluemix...")
+	xhrGet("bluemix", function(responseText){
+		// add to document
+		var mytitle = document.getElementById('bluemix');
+		mytitle.innerHTML = responseText;
+
+	}, function(err){
+		console.log(err);
+	});
+}
+
 //utilities
 function createXHR(){
 	if(typeof XMLHttpRequest != 'undefined'){

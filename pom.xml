@@ -45,6 +45,17 @@
 		</dependency>
 
 
+		
+		<!--
+				<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client-gson</artifactId>
+			<version>1.22.0</version>
+		</dependency>
+		 
+		
+		-->
+		
 		<dependency>
 			<groupId>com.google.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -58,6 +69,19 @@
 		</dependency>
 
 	</dependencies>
+	
+	<repositories>
+		<repository>
+                 <id>nexus</id>
+ 				<url>http://search.maven.org/</url>
+                 <releases>
+                    <enabled>true</enabled>
+                 </releases>
+                 <snapshots>
+                    <enabled>true</enabled>
+                 </snapshots>
+      </repository>
+	</repositories>
 
 	<build>
 		<plugins>

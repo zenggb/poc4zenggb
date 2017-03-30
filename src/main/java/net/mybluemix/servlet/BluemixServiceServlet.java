@@ -30,9 +30,13 @@ public class BluemixServiceServlet extends HttpServlet {
 	private String translateToSpanish(String text) {
 
 		LanguageTranslation service = new LanguageTranslation();
+		System.out.println("bluemix.endpoint="+service.getEndPoint());
+		service.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
 		service.setUsernameAndPassword("9420c40d-955a-4521-ba66-cfc5e8e03165", "G5rX2HgR2XgH");
 		TranslationResult translationResult = service.translate(text, Language.ENGLISH, Language.SPANISH).execute();
-		return translationResult.getFirstTranslation();
+		String result = translationResult.getFirstTranslation();
+		System.out.println("bluemix.result="+result);
+		return result;
 	}
 
 }

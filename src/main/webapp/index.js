@@ -50,7 +50,7 @@ function xhrGet(url, callback, errback){
 			}
 		}
 	};
-	xhr.timeout = 3000;
+	xhr.timeout = 10000;
 	xhr.ontimeout = errback;
 	xhr.send();
 }
